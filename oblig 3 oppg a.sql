@@ -7,7 +7,7 @@ CREATE TABLE Tog(
   startStasjon text,
   endestasjon text, --begge bruker tekst siden stasjonene har navn som for eksempel ski stasjon, oslo stasjon osv
   ankomstid timestamp, --tar klokkeslettet for naar den kom, som er det som er vist naar man er paa toget
-  primary key (togNr) –- key som spesifisert i lista med krav
+  primary key (togNr) -- key som spesifisert i lista med krav
 )
 
 CREATE TABLE TogTabell(

@@ -16,7 +16,7 @@ CREATE TABLE td.Tog(
 );
 
 CREATE TABLE td.TogTabell(
-  togNr int REFERENCES Tog(togNr), --foreign key
+  togNr int REFERENCES td.Tog(togNr), --foreign key
   avgangsTid timestamp, -- samme grunn som ankomstid
   stasjon text,
   primary key (togNr, avgangsTid)
@@ -24,7 +24,7 @@ CREATE TABLE td.TogTabell(
 
 CREATE TABLE td.Plass(
   dato date,--dato er en egen datatype og foeler at det er naturlig aa bruke date paa dato
-  togNr int REFERENCES Tog(togNr),
+  togNr int REFERENCES td.Tog(togNr),
   vognnr int, --vognnr refererer til hvilken vogn som er paa toget
   plassNr int, --refererer til seter paa toget
   vindu boolean, --om det er vindusplass eller ikke er en sann/usann paastand og derfor passer boolean her best
